@@ -1,7 +1,19 @@
-
- var origBoard;
-const huPlayer = 'O';
-const aiPlayer = 'X';
+var m =1;
+document.getElementsByClassName("mvc").onclick = function(){
+    console.log(m);
+	m=0;
+};
+var h = "X";
+var a = "O";
+document.getElementsByClassName('o').onclick=function(){
+	h = "O";
+	a = "X";
+};
+console.log(m)
+if(m == 0){
+var origBoard;
+const huPlayer = h;
+const aiPlayer = a;
 const winCombos = [
 	[0, 1, 2],
 	[3, 4, 5],
@@ -17,7 +29,7 @@ const cells = document.querySelectorAll('.cell');
 startGame();
 
 function startGame() {
-	document.querySelector(".endgame").style.display = "none";
+	document.querySelector('.endgame').style.display = "none";
 	origBoard = Array.from(Array(9).keys());
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
@@ -32,7 +44,7 @@ function turnClick(square) {
 		if (!checkWin(origBoard, huPlayer) && !checkTie()) turn(bestSpot(), aiPlayer);
 	}
 }
-
+ 
 function turn(squareId, player) {
 	origBoard[squareId] = player;
 	document.getElementById(squareId).innerText = player;
@@ -56,12 +68,12 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
-			gameWon.player == huPlayer ? "blue" : "red";
+			gameWon.player == huPlayer ? "#66ff33" : "red";
 	}
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+	declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose ! ");
 }
 
 function declareWinner(who) {
@@ -80,7 +92,7 @@ function bestSpot() {
 function checkTie() {
 	if (emptySquares().length == 0) {
 		for (var i = 0; i < cells.length; i++) {
-			cells[i].style.backgroundColor = "green";
+			cells[i].style.backgroundColor = "#66ff33";
 			cells[i].removeEventListener('click', turnClick, false);
 		}
 		declareWinner("Tie Game!")
@@ -138,4 +150,9 @@ function minimax(newBoard, player) {
 	}
 
 	return moves[bestMove];
+ }
+}
+else{
+	alert("Player 1 Choose your Choice : ")
+	
 }

@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Tic-Tac-Toe</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<h1>Tic-Tac-Toe</h1>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <title>Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script type="text/javascript" src='main.js'></script>
+    <h1>Tic-Tac-Toe</h1>
 </head>
-<body>
-   <table>
-   	<tr>
-   		<td class="cell" id="0"></td>
-   		<td class="cell" id="1"></td>
-   		<td class="cell" id="2"></td>
-   	</tr>
-   	<tr>
-   		<td class="cell" id="3"></td>
-   		<td class="cell" id="4"></td>
-   		<td class="cell" id="5"></td>
-   	</tr>
-   	<tr>
-   		<td class="cell" id="6"></td>
-   		<td class="cell" id="7"></td>
-   		<td class="cell" id="8"></td>
-   	</tr>
-   </table>
-   <div class="endgame">
-   	<div class="text"></div>
-   	<button onclick="startGame()">Replay</button>
-   </div>
+<body >
+ <div class="choose">
+    <h1>Choose Mode: </h1>
+   <div class ="mode">
+    <div class="mvc" >
+        <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;">
+        <h1 >Vs</h1>
+        <img src="images/computer.png" alt="computer" style="width:100px;height:100px;">   
+    </div>
+    <br>
+    <div class ="mvm" >
+        <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;">
+        <h1>Vs</h1>
+        <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;">   
+  </div>
+</div> 
+   <h1>Choose : </h1>
+    <div class="xo">
+      <img class="x" src="images/x.png" alt="x" value="X">
+      <h1>Or</h1>
+      <img  class ="o" src="images/o.png" alt="o" value="O">
+    </div>
+ 
+</div>
 </body>
- <script type="text/javascript" src="main.js"></script>
 </html>
+
+<script>
+     $( document ).ready(function() {
+ 
+
+    $('.mvm').click(function () {
+       $(this).effect("bounce", { direction:'up', times:5 }, 300);
+    });
+
+    $('.mvc').click(function () {
+       $(this).effect("bounce", { direction:'up', times:5 }, 300);
+    });
+
+    $('.o').click(function () {
+       $(this).effect("bounce", { direction:'up', times:5 }, 300);
+       window.location.href="game.html"
+    });
+
+    $('.x').click(function () {
+       $(this).effect("bounce", { direction:'up', times:5 }, 300);
+       window.location.href="game.html"
+    });
+});
+</script>

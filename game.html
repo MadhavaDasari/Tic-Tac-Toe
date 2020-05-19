@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	
+<head> 
+	<meta charset="UTF-8">
+	<title>Tic-Tac-Toe</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+      
+	<h1>Tic-Tac-Toe</h1>
+</head>
+<body>
+
+   <table>
+   	<tr>
+   		<td class="cell" id="0"></td>
+   		<td class="cell" id="1"></td>
+   		<td class="cell" id="2"></td>
+   	</tr>
+   	<tr>
+   		<td class="cell" id="3"></td>
+   		<td class="cell" id="4"></td>
+   		<td class="cell" id="5"></td>
+   	</tr>
+   	<tr>
+   		<td class="cell" id="6"></td>
+   		<td class="cell" id="7"></td>
+   		<td class="cell" id="8"></td>
+   	</tr>
+   </table>
+   <div class="endgame">
+   	<div class="text"></div>
+   	<button onclick="startGame()">Replay</button>
+   </div>
+   <script type="text/javascript" src="main.js"></script>
+</body>
+ 
+ <script type="text/javascript">
+ 
+    $( document ).ready(function() {
+ 
+
+    $('#0').click(function () {
+          $(this).effect("bounce", { direction:'left', times:5 }, 300);
+    });
+ 
+    $('#1').click(function () {
+          $(this).effect("bounce", { direction:'up', times:5 }, 300);
+    });
+ 
+    $('#3').click(function () {
+          $(this).effect("bounce", { direction:'left', times:5 }, 300);
+    });
+ 
+    $('#4').click(function () {
+          $(this).effect("bounce", { direction:'down', times:5 }, 300);
+    });
+	
+	$('#5').click(function () {
+          $(this).effect("bounce", { direction:'right', times:5 }, 300);
+    });
+ 
+	$('#6').click(function () {
+          $(this).effect("bounce", { direction:'left', times:5 }, 300);
+    });
+ 
+	$('#7').click(function () {
+          $(this).effect("bounce", { direction:'down', times:5 }, 300);
+    });
+ 
+	$('#8').click(function () {
+          $(this).effect("bounce", { direction:'right', times:5 }, 300);
+    });
+ 
+	$('#2').click(function () {
+          $(this).effect("bounce", { direction:'right', times:5 }, 300);
+    });
+ 
+    
+});
+ 
+</script>
+</html>

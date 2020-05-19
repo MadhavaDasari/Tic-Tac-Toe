@@ -1,51 +1,93 @@
 td {
-	 border:2px solid DodgerBlue;
+	 border:2px solid rgb(134, 5, 209);
 	 height:100px;
 	 width:100px;
 	 text-align:center;
 	 vertical-align: middle;
 	 font-family:"Comic Sans MS",cursive,sans-serif;
 	 font-size: 70px;
+	 color:rgb(255, 255, 255) ;
 	 cursor:pointer;
-	 border-radius: 5px;
+	 border-radius: 20px; 
+	 outline: none;
+	 border-color: #f3f2f5;
+	 box-shadow: 0 0 10px #f7f4f4;
+	
 	}
-	h1{
-	  font-family: "Comic Sans MS",cursive, cursive;
-	  color:DodgerBlue;
-	  font-size: 50px;
-	 margin-left:530px;
-	}
+	
 table{
        position:absolute;
        left:50%;
-       margin-left:-155px;
+       margin-left:-165px;
        top:150px;
 	}
 	button{
 		height: 20px;
 		width:70px;
-		color:DodgerBlue;
+		color:rgb(11, 11, 12);
 	}
 .endgame{
 	 display:none;
 	 width: 200px;
 	 top:120px;
-	 background-color: white;
-	 position: absolute;
+	 border:2px solid rgb(237, 234, 238);
 	 left : 50%;
-	 margin-left:-100px;
+	 margin-left:900px;
+	 margin-top: 100px;
 	 padding-bottom: 50px;
 	 text-align:center;
 	 border-radius: 5px;
 	 color: white;
 	 font-size:2em;
+	 border-color: #f3f2f5;
+	 box-shadow: 0 0 10px #f7f4f4;
+}
+.choose{
+	border-style: solid;
+	color : white;
+	
 }	
-
+.mode{
+	color : white;
+	display: flex;
+    justify-content: space-between; 
+}
+body{
+	background-image: url('images/1.jpg');
+	background-position: 0em;
+	/* background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten; */
+	background-attachment: fixed;
+	background-size: cover;
+}
+img{
+	
+	padding: 20px;
+}
+.mvc{
+	border-style: solid;
+	width: 600px;
+	border-radius: 15px;
+	display: flex;
+    justify-content: space-between; 
+}
+.mvm{
+	border-style: solid;
+	width: 600px;
+	display: flex;
+	border-radius: 15px;
+    justify-content: space-between; 
+}
+.xo{
+	display:flex;
+	justify-content:space-between;
+}
+ 
 h1 {
 	font-family: "Comic Sans MS",cursive, cursive;
 	font-size: 50px;
 	margin-left:20px;
-    color:white;
+    color:rgb(248, 244, 244);
     text-align: center;
    -webkit-animation: glow 1s ease-in-out infinite alternate;
    -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -54,9 +96,10 @@ h1 {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px rgb(6, 196, 221), 0 0 20px rgb(7, 241, 221), 0 0 30px #0eeee3, 0 0 40px #00e6c7, 0 0 50px #00e6d3, 0 0 60px #00e6db, 0 0 70px #00e6c7;
   }
   
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px rgb(245, 229, 6), 0 0 30px #f3cf02, 0 0 40px #fdcf02, 0 0 50px #fad504, 0 0 60px #fae902, 0 0 70px #f8d301, 0 0 80px #f7d203;
   }
+}
