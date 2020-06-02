@@ -2,6 +2,10 @@
  var h = "X";
 var a = "O";
 
+function reset(){
+
+	 game();
+}
 $(document).ready(function(){
   
 	 $(".mode").show();
@@ -10,21 +14,22 @@ $(document).ready(function(){
 
 	 $("#mvc").click(function(){
 		 m=0;
-		 $(".mode").hide();
-		 $(".xo").show();
+		 $(".mode").hide(2500);
+		 $(".xo").show(2000);
 		 $(".game").hide();
 	
 	 })
 	 $("#mvm").click(function(){
-		$(".mode").hide();
-		$(".xo").show();
+		$(".mode").hide(2500);
+		$(".xo").show(2000);
 		$(".game").hide();
+		document.querySelector("#change").innerText="Player 1 choose : "
    
 	})
 	 $("#o").click(function(){ 
 		$(".mode").hide();
-		$(".xo").hide();
-		$(".game").show();
+		$(".xo").hide(3000);
+		$(".game").show(3000);
 		 h="O";
 		 a ="X";
 		 game();
@@ -32,8 +37,9 @@ $(document).ready(function(){
 
 	 $("#x").click(function(){
 		$(".mode").hide();
-		$(".xo").hide();
-		$(".game").show();
+		$(".xo").hide(3000);
+		$(".game").show(3000);
+		$("ul").show();
 		game();
 	 })
 	})
@@ -182,6 +188,7 @@ function minimax(newBoard, player) {
  }
 }
 else{
+
     var x =0;
 	var origBoard;
 const huPlayer = h;
@@ -255,7 +262,7 @@ const cells = document.querySelectorAll('.cell');
 		for (var i = 0; i < cells.length; i++) {
 			cells[i].removeEventListener('click', turnClick, false);
 		}
-		declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose ! ");
+		declareWinner(gameWon.player == huPlayer ? "Player 1 won!" : "player 2  won! ");
 	}
 	
 	function declareWinner(who) {

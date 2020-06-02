@@ -6,38 +6,38 @@
    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-   <title>Home Page</title>
+   <title>Tic-Tac-Toe</title>
    <meta name='viewport' content='width=device-width, initial-scale=1'>
    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 
-   <h1>Tic-Tac-Toe</h1>
+   <h1 class="style" id="top">Tic-Tac-Toe</h1>
 </head>
 
 <body>
    
    <div class="choose">   
       <div class="mode">
-         <h1>Choose Mode: </h1>
+         <h1 class="style">Choose Mode: </h1>
          <div id="mvc">
             <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;">
-            <h1>Vs</h1>
-            <img src="images/computer.png" alt="computer" style="width:100px;height:100px;">
+            <h1 class="style">Vs</h1>
+            <img src="images/bot.jpg" alt="computer" style="width:100px;height:100px;">
          </div>
          <br>
          <div id="mvm">
-            <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;">
-            <h1>Vs</h1>
+            <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;border-radius: 15px;">
+            <h1 class="style">Vs</h1>
             <img src="images/man.png" alt="man" style="width:100px;height:100px;background-color: aliceblue;">
          </div>
       </div>
       <div class="xo">
-         <h1>Choose : </h1>
+         <h1 class="style" id="change">Choose : </h1>
          <div class="s">
-         <img id="x" src="images/x.png" alt="x" value="X" style="margin-left: 400px;">
-         <h1>Or</h1>
-         <img id="o" src="images/o.png" alt="o" value="O" style="margin-right: 500px;">
+         <img id="x" src="images/x.png" alt="x" value="X" >
+         <h1 class="style">Or</h1>
+         <img id="o" src="images/o.png" alt="o" value="O" >
         </div>
-        <h1 style="margin-left: 100px;" onclick="window.location.reload()">GoBack</h1>
+        <h1 style="margin-left: 100px;" onclick="window.location.reload()" class="style">GoBack</h1>
        </div>
 
    </div>
@@ -46,10 +46,15 @@
      
    <table>
       <div class="options">
-      <ul>
-         <h1 id="mode">choosemode</h1>
-         <h1 id ="xo">choose X or O</h1>
-      </ul>
+      
+          <button id="mode" class="style">changeMode</button>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+         <button id ="reset " onclick="reset()" class="style">ResetBoard </button>
+      
    </div>
       <tr>
          <td class="cell" id="0"></td>
@@ -69,10 +74,10 @@
    </table>
 </div>   
    <div class="endgame">
-      <div class="text"></div>
-      <button onclick="game()">Replay</button>
+      <div class="text" class="style"></div>
+      <div onclick="game()" class = "style">Replay</div>
    </div>
-
+  
    <script type="text/javascript" src='main.js'></script>
 </body>
 
@@ -144,13 +149,7 @@
 	      $(".game").hide();
       })
        
-      $('#xo').click(function(){
-         window.location.reload();
-         $(".mode").hide();
-	      $(".xo").show();
-	      $(".game").hide();
-      })
-
+     
    });
 
 </script>
